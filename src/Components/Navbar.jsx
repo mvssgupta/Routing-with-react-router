@@ -1,11 +1,28 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 const Navbar = () => {
+  const navLinkStyles = ({ isActive }) => {
+    return {
+      fontWeight: isActive ? "bold" : "normal",
+      color: isActive ? "red" : "black",
+    };
+  };
+
   return (
-  <nav className="navbar">
-    <Link className = "link" to="/">Home</Link><br/>
-    <Link className = "link" to="/about">About</Link>
-  </nav>
-  )
-}
+    <nav className="navbar">
+      <NavLink style={navLinkStyles} className="link" to="/">
+        Home
+      </NavLink>
+      <br />
+      <NavLink style={navLinkStyles} className="link" to="/about">
+        About
+      </NavLink>
+    </nav>
+  );
+};
 
 export default Navbar;
+
+
+
+//generally adding navLink instead of link adds an additional class(called active) to the respective components
+//so that we can style the component(using css or in the component itself using js) such that it differentiates active link and normal link

@@ -19,6 +19,8 @@ function App() {
         <Route path="/about" element={<About/>}></Route>
         <Route path="/order-summary" element={<OrderSummary/>}></Route>
         <Route path="/products" element={<Products/>}>
+        {/* index route shares the path of the parent route */}
+          <Route index element={<FeaturedProducts/>}></Route>  
           <Route path="featured" element={<FeaturedProducts/>}></Route>
           <Route path="new" element={<NewProducts/>}></Route>
         </Route>

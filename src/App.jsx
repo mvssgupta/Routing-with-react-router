@@ -1,5 +1,5 @@
+import React from 'react';
 import './App.css'
-import About from './Components/About'
 import Home from './Components/Home'
 import { BrowserRouter ,Routes , Route } from 'react-router-dom'
 import Navbar from './Components/Navbar'
@@ -11,6 +11,7 @@ import NewProducts from './Components/NewProducts'
 import User from './Components/User'
 import UserDetails from './Components/UserDetails'
 import Admin from './Components/Admin'
+const LazyAbout = React.lazy(() => import('./Components/About'))
 
 function App() {
 
@@ -20,7 +21,7 @@ function App() {
     <Navbar/>
       <Routes>
         <Route path="/" element={<Home/>}></Route>
-        <Route path="/about" element={<About/>}></Route>
+        <Route path="/about" element={<React.Suspense fallback="Loading....."><LazyAbout/></React.Suspense>}></Route>
         <Route path="/order-summary" element={<OrderSummary/>}></Route>
         <Route path="/products" element={<Products/>}>
         {/* index route shares the path of the parent route */}

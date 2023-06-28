@@ -8,6 +8,10 @@ import PageNotFound from './Components/PageNotFound'
 import Products from './Components/Products'
 import FeaturedProducts from './Components/FeaturedProducts'
 import NewProducts from './Components/NewProducts'
+import User from './Components/User'
+import UserDetails from './Components/UserDetails'
+import Admin from './Components/Admin'
+
 function App() {
 
   return (
@@ -24,6 +28,9 @@ function App() {
           <Route path="featured" element={<FeaturedProducts/>}></Route>
           <Route path="new" element={<NewProducts/>}></Route>
         </Route>
+        <Route path="/user" element={<User/>}></Route>
+        <Route path="user/:userId" element={<UserDetails/>}></Route>
+        <Route path="user/admin" element={<Admin/>}></Route>
         <Route path="*" element={<PageNotFound/>}></Route>
       </Routes>
     </BrowserRouter>                        

@@ -20,6 +20,10 @@ const Navbar = () => {
       <NavLink style={navLinkStyles} className="link" to="/products">
         Products
       </NavLink>
+      <br />
+      <NavLink style={navLinkStyles} className="link" to="/user">
+        Users
+      </NavLink>
     </nav>
   );
 };

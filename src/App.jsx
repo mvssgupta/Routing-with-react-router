@@ -4,6 +4,7 @@ import Home from './Components/Home'
 import { BrowserRouter ,Routes , Route } from 'react-router-dom'
 import Navbar from './Components/Navbar'
 import OrderSummary from './Components/OrderSummary'
+import PageNotFound from './Components/PageNotFound'
 function App() {
 
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home/>}></Route>
         <Route path="/about" element={<About/>}></Route>
         <Route path="/order-summary" element={<OrderSummary/>}></Route>
+        <Route path="*" element={<PageNotFound/>}></Route>
       </Routes>
     </BrowserRouter>
     

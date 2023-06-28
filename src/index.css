@@ -41,7 +41,7 @@ button {
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
-  font-weight: 500;
+  font-weight: 200;
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
@@ -69,19 +69,28 @@ button:focus-visible {
 }
 
 .navbar {
+  margin:30px;
   background-color: yellow;
   display: flex;
   flex-wrap: wrap;
   align-content: stretch;
-  .link {
-    flex:1;
-    color:black;
-    padding:5px;
-    margin : 5px;
-  }
-  /* we have used this class to style the active link , this class is automatically added to the active link */
-  /* .active{
-    font-weight:bold;
-    color:red;
-  } */
+}
+.link {
+  flex:1;
+  color:black;
+  padding:5px;
+  margin : 5px;
+}
+/* we have used this class to style the active link , this class is automatically added to the active link */
+/* .active{
+  font-weight:bold;
+  color:red;
+} */
+
+.productsNavbar{
+  margin:10px;
+  background-color: #EEE8AA;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
 }

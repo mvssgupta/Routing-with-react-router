@@ -16,6 +16,10 @@ const Navbar = () => {
       <NavLink style={navLinkStyles} className="link" to="/about">
         About
       </NavLink>
+      <br />
+      <NavLink style={navLinkStyles} className="link" to="/products">
+        Products
+      </NavLink>
     </nav>
   );
 };

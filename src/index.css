@@ -104,3 +104,9 @@ button:focus-visible {
   margin: 10px;
   background-color: #FFF;
 }
+
+
+input{
+  margin:10px;
+  padding:10px;
+}

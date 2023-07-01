@@ -7,7 +7,7 @@ const Login = () => {
   const [user, setUser] = useState(null);
   const handleLogin = () => {
     auth.login(user);
-    navigate("/profile");
+    navigate("/profile",{replace:true}); // using replace: true, the navigation will replace the current entry in the history stack instead of adding a new one.
   };
   return (
     <>
